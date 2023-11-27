@@ -1,8 +1,8 @@
 class Player {
   constructor({ position = { x: 0, y: 0 } }) {
     this.position = position;
-    this.width = 100;
-    this.height = 100;
+    this.width = 50;
+    this.height = 50;
 
     this.gravityFactor = 0.5;
     this.velocity = {
@@ -31,6 +31,3 @@ class Player {
   }
 }
 
-class Spirit{
-
-}

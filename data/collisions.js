@@ -7,12 +7,4 @@ const collisionLvl1 = [
   292, 292, 292, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ];
-Array.prototype.parse2d = () => {
-  const rows = [];
-  for (let i = 0; i < this.length; i += 16) {
-    rows.push(this.slice(i,i+16))
-  }
-  return rows
-};
-const parsedCol = collisionLvl1.parse2d()
 

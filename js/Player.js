@@ -3,7 +3,7 @@ class Player extends Spirit {
     super({ imageSrc, frameRate: 11 });
     this.position = {
       x: 400,
-      y: 400,
+      y: 200,
     };
     this.collisionBlocks = collisionBlocks;
 

@@ -23,7 +23,7 @@ function animate() {
   c.fillStyle = "white";
   c.fillRect(0, 0, canvas.width, canvas.height);
   backgroundlvl1.draw();
-  window.scrollTo(player.position.x-200,player.position.y-100);
+  window.scrollTo(player.position.x-200,player.position.y-200);
   collisionBlocks.forEach((block) => {
     block.draw();
   });

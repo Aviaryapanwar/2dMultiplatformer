@@ -29,8 +29,26 @@ function animate() {
   });
 
   player.velocity.x = 0;
-  if (keys.a.pressed) player.velocity.x = -4;
-  else if (keys.d.pressed) player.velocity.x = 4;
+  if (keys.a.pressed) {
+    player.switchSpirit('runLeft')
+    player.lastdirection = 'Left'
+    player.velocity.x = -4;
+   
+  }
+  else if (keys.d.pressed) {
+     player.switchSpirit('runRight')
+     player.lastdirection = 'Right'
+    player.velocity.x = 4;
+  }
+  else {
+    if(player.lastdirection === 'Right')
+  player.switchSpirit('idleRight')
+ else{
+  player.switchSpirit('idleLeft')
+ }
+}
+
   player.update();
 }
+
 animate();

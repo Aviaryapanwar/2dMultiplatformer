@@ -1,5 +1,5 @@
 class Spirit {
-  constructor({ position, imageSrc ,frameRate=1}) {
+  constructor({ position, imageSrc ,frameRate=1,animations}) {
     this.position = position;
     this.image = new Image();
     this.frameRate = frameRate
@@ -13,6 +13,14 @@ class Spirit {
     this.loaded = true;
     this.elapsedFrame = 0
     this.frameBuffer = 5
+    this.animations = animations
+    if(this.animations){
+      for(let key in this.animations){
+        const image = new Image()
+        image.src = this.animations[key].imageSrc
+        this.animations[key].image = image
+        }
+    }
   }
   draw() {
     if (!this.loaded) return;

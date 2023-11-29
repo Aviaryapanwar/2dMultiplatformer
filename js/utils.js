@@ -1,7 +1,7 @@
 Array.prototype.parse2d = function () {
   const rows = [];
-  for (let i = 0; i < this.length; i += 16) {
-    rows.push(this.slice(i, i + 16));
+  for (let i = 0; i < this.length; i += 32) {
+    rows.push(this.slice(i, i + 32));
   }
   return rows;
 };

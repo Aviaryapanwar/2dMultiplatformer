@@ -2,8 +2,8 @@ class Player extends Spirit {
   constructor({ collisionBlocks = [], imageSrc }) {
     super({ imageSrc, frameRate: 11 });
     this.position = {
-      x: 200,
-      y: 200,
+      x: 400,
+      y: 400,
     };
     this.collisionBlocks = collisionBlocks;
 
@@ -24,12 +24,7 @@ class Player extends Spirit {
     this.applyGravity();
     this.updateHitbox();
     this.checkForVerticalCollisions();
-    c.fillRect(
-      this.hitbox.position.x,
-      this.hitbox.position.y,
-      this.hitbox.width,
-      this.hitbox.height
-    );
+    
     //  c.fillStyle ='blue'
     //  c.fillRect(this.position.x,this.position.y,this.width,this.height);
     this.draw();

@@ -1,7 +1,7 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
-canvas.width = 1024;
-canvas.height = 576;
+canvas.width = 2048;
+canvas.height = 1152;
 
 const parsedCollisions = collisionLvl1.parse2d();
 const collisionBlocks = parsedCollisions.createObjectsFrom2D();
@@ -23,7 +23,7 @@ function animate() {
   c.fillStyle = "white";
   c.fillRect(0, 0, canvas.width, canvas.height);
   backgroundlvl1.draw();
-
+  window.scrollTo(player.position.x-200,player.position.y-100);
   collisionBlocks.forEach((block) => {
     block.draw();
   });
